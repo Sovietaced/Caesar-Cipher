@@ -29,10 +29,10 @@ function shift(strIn, numShift) result(strOut)
     j = iachar(strIn(i:i))
     ! Only evaluate valid characters
     if (j /= 32) then 
-      if (j + numShift > high) then
-        strOut(i:i) = achar(low+(numShift-(high-j)))
+      if (j - numShift < low) then
+        strOut(i:i) = achar(high-(numShift-(j-low)))
       else
-        strOut(i:i) = achar(j+numShift)
+        strOut(i:i) = achar(j-numShift)
       end if
     else
       strOut(i:i) = strIn(i:i)
