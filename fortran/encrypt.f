@@ -30,7 +30,7 @@ function shift(strIn, numShift) result(strOut)
     ! Only evaluate valid characters
     if (j /= 32) then 
       if (j + numShift > high) then
-        strOut(i:i) = achar(low+(numShift-(high-j)))
+	strOut(i:i) = achar(low+((numShift-1)-(high-j)))
       else
         strOut(i:i) = achar(j+numShift)
       end if

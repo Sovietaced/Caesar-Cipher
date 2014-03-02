@@ -15,22 +15,29 @@ function to_upper(strIn) result(strOut)
   end do
 end function to_upper
 
-function shift(strIn, numShift) result(strOut)
+function shift(strIn, num) result(strOut)
   implicit none
 
   character(len=*), intent(in) :: strIn
   character(len=len(strIn)) :: strOut
-  integer :: i,j,low,high,numShift
-   
+  integer :: i,j,low,high,num, numShift
+    
   low = iachar("A")
   high = iachar("Z")
   
+  ! Handle multiple wraps  
+  if(num >= 26) then
+    numShift = mod(num, 26)
+  else
+    numShift = num
+  end if
+ 
   do i = 1, len(strIn)
     j = iachar(strIn(i:i))
     ! Only evaluate valid characters
-    if (j /= 32) then 
+    if (j /= 32) then
       if (j - numShift < low) then
-        strOut(i:i) = achar(high-(numShift-(j-low)))
+        strOut(i:i) = achar(high-((numShift - 1)-(j-low)))
       else
         strOut(i:i) = achar(j-numShift)
       end if
