@@ -27,7 +27,7 @@ function shift(strIn, num) result(strOut)
   
   ! Handle multiple wraps  
   if(num >= 26) then
-    numShift = mod(26,num)
+    numShift = mod(num, 26)
   else
     numShift = num
   end if
