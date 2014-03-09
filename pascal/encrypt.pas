@@ -1,5 +1,7 @@
 program Encrypt;
 
+Uses sysutils;
+
 var 
   input: string;
   numShift: integer;
@@ -8,4 +10,6 @@ begin
   readln(input);
   writeln('Enter a number');
   readln(numShift);
+  
+  UpperCase(input);
 end.
