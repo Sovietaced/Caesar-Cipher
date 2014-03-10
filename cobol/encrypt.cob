@@ -14,7 +14,8 @@
     		ACCEPT inputString
 		DISPLAY "Enter an integer: " NO ADVANCING
 		ACCEPT numShift    
+		MOVE Function Upper-case(inputString) to inputString
 		STOP RUN.
-    	
+	
 	encrypt.
 	
