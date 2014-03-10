@@ -35,5 +35,5 @@
 		DISPLAY inputString
 		STOP RUN.
 			
-	encrypt-encrypt.
+	caesar-encrypt.
 	
