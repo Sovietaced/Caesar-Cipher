@@ -1,4 +1,4 @@
-program Encrypt;
+program Solve;
 
 uses sysutils;
 
