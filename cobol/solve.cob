@@ -1,5 +1,5 @@
         IDENTIFICATION DIVISION.
-        PROGRAM-ID. caesar-decrypt.
+        PROGRAM-ID. caesar-solve.
         
         ENVIRONMENT DIVISION.
         
@@ -40,5 +40,5 @@
 			DISPLAY "Caesar " j ": " tempInputString
 		END-PERFORM
 		STOP RUN.
-	END PROGRAM caesar-decrypt.
+	END PROGRAM caesar-solve.
 	
