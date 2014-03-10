@@ -7,10 +7,17 @@ var
 function shift(strInput: string; num: integer): string;
 var
   i: integer;
+  character: char;
 begin
+     if num >= 26 then
+         num := num mod 26;
      for i := 1 to Length(strInput) do begin
-       writeln(ord(strInput[i]));
-       strInput[i] := chr(ord(strInput[i]) + 1)
+         character := strInput[i];
+         writeln(ord('Z'));
+         if((ord(character) + num) <= ord('Z')) then
+	      strInput[i] := chr(ord(character) + num)
+	  else
+	      strInput[i] := chr(ord('A') + ((ord(character) + num) -1) - ord('Z'))
      end;
      
      shift := strInput;
