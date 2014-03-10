@@ -13,7 +13,6 @@ begin
          num := num mod 26;
      for i := 1 to Length(strInput) do begin
          character := strInput[i];
-         writeln(ord('Z'));
          if((ord(character) + num) <= ord('Z')) then
 	      strInput[i] := chr(ord(character) + num)
 	  else
