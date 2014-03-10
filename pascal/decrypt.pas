@@ -1,4 +1,4 @@
-program Encrypt;
+program Decrypt;
 
 var
   input: string;
