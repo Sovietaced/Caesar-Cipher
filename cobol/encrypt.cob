@@ -1,5 +1,5 @@
         IDENTIFICATION DIVISION.
-        PROGRAM-ID. caesar.
+        PROGRAM-ID. caesar-encrypt.
         
         ENVIRONMENT DIVISION.
         
@@ -35,5 +35,5 @@
 		DISPLAY inputString
 		STOP RUN.
 			
-	encrypt.
+	encrypt-encrypt.
 	
