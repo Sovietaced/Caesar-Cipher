@@ -2,8 +2,8 @@
 	(let ((up))
 		(setq up (+ (char-int c) numshift))
   			(if (< up 90)
-  				(print (code-char up))
-  				(print (code-char up)))))
+  				(code-char up)
+  				(code-char (+ 64 (- up 90))))))
 
 (defun e (input shift) 
 	(let ((up))
