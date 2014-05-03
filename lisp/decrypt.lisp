@@ -1,0 +1,13 @@
+(defun shift (c numshift)
+	(let ((down))
+		(setq down (- (char-int c) numshift))
+  			(if (> down 64)
+  				(code-char down)
+  				(code-char (- 90 (- 64 down))))))
+
+(defun d (input shift) 
+	(let ((up))
+		(setq up (string-upcase input))
+		(let ((numshift))
+			(setq numshift (rem shift 26))
+				(map 'string #'(lambda (c) (shift c numshift)) up))))
