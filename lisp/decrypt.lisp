@@ -1,7 +1,7 @@
 (defun shift (c numshift)
 	(let ((down))
 		(setq down (- (char-int c) numshift))
-  			(if (> down 64)
+  			(if (>= down 64)
   				(code-char down)
   				(code-char (- 90 (- 64 down))))))
 
