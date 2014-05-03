@@ -14,4 +14,4 @@
 
 (defun solve (input shift)
 	(loop for i from shift downto 0 do 
-		(print (e input i))))
+		(print (concatenate 'string "Caesar " (write-to-string i) ": " (e input i)))))
